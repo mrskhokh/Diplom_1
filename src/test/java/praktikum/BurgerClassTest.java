@@ -20,6 +20,32 @@ public class BurgerClassTest {
     private Ingredient mockIngredient2;
 
     @Test
+    public void setBunsTest() {
+        // Arrange
+        Burger burger = new Burger();
+        Bun expectedBun = new Bun("Булочка с маком", 10.0F);
+
+        // Act
+        burger.setBuns(expectedBun);
+
+        // Assert
+        assertEquals(expectedBun, burger.bun);
+    }
+
+
+    @Test
+    public void addIngredientTest() {
+        // Arrange
+        Burger burger = new Burger();
+        Ingredient expectedIngredient = new Ingredient(IngredientType.SAUCE,"Соус чили",1.0F);
+
+        // Act
+        burger.addIngredient(expectedIngredient);
+
+        // Assert
+        assertTrue(burger.ingredients.contains(expectedIngredient));
+    }
+    @Test
     public void getPriceTest() {
         Burger burger = new Burger();
         burger.setBuns(mockBun);
