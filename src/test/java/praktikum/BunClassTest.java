@@ -14,6 +14,6 @@ public class BunClassTest {
     @Test
     public void testGetPrice() {
         Bun bun = new Bun("Cinnamon Bun", 2.5f);
-        assertEquals(2.5f, bun.getPrice(), 0.001); // Проверка с погрешностью 0.001 из-за работы с float
+        assertEquals(2.5f, bun.getPrice(), TestUtils.DELTA); // Проверка с погрешностью 0.001 из-за работы с float
     }
 }

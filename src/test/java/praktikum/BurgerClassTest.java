@@ -57,7 +57,7 @@ public class BurgerClassTest {
         when(mockIngredient2.getPrice()).thenReturn(2.0f);
 
         float expectedPrice = 3.0f * 2 + 1.5f + 2.0f;
-        assertEquals(expectedPrice, burger.getPrice(), 0.001);
+        assertEquals(expectedPrice, burger.getPrice(), TestUtils.DELTA);
     }
 
     @Test

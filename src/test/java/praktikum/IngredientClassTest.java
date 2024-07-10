@@ -14,7 +14,7 @@ public class IngredientClassTest {
     @Test
     public void testGetPrice() {
         Ingredient ingredient = new Ingredient(IngredientType.FILLING, "Tomato", 0.75f);
-        assertEquals(0.75f, ingredient.getPrice(), 0.001);
+        assertEquals(0.75f, ingredient.getPrice(), TestUtils.DELTA);
     }
 
     @Test
@@ -28,6 +28,6 @@ public class IngredientClassTest {
         Ingredient ingredient = new Ingredient(IngredientType.SAUCE, "Chicken", 2.0f);
         assertEquals(IngredientType.SAUCE, ingredient.getType());
         assertEquals("Chicken", ingredient.getName());
-        assertEquals(2.0f, ingredient.getPrice(), 0.001);
+        assertEquals(2.0f, ingredient.getPrice(), TestUtils.DELTA);
     }
 }
