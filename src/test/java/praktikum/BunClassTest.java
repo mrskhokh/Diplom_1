@@ -8,6 +8,7 @@ import java.util.Arrays;
 import java.util.Collection;
 
 import static org.junit.Assert.assertEquals;
+
 @RunWith(Parameterized.class)
 public class BunClassTest {
     private final String name;
@@ -17,12 +18,13 @@ public class BunClassTest {
         this.name = name;
         this.price = price;
     }
+
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                { "Cinnamon Bun", 2.5f},
-                { "Cinnamon Bun Double", 5.0f},
-                        });
+                {"Cinnamon Bun", 2.5f},
+                {"Cinnamon Bun Double", 5.0f}
+        });
     }
 
     @Test
